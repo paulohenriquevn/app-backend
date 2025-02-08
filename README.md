@@ -1,24 +1,27 @@
-# app-processa-modelos
+# coleta-dados
+
+Teste:
+http://37.27.255.191:8000/status
 
 Conectando:
 
 ```sh
-ssh-keygen -R 65.108.246.19
+ssh-keygen -R 37.27.255.191
 
-ssh deploy@65.108.246.19
+ssh deploy@37.27.255.191
 
-ssh root@65.108.246.19
+ssh root@37.27.255.191
 ```
 
 Em caso de problema:
 
 ```sh
-git clone git@github.com:paulohenriquevn/app-processa-modelos.git app-processa-modelos
+git clone git@github.com:paulohenriquevn/app-backend.git app-backend
 ```
 
 # ✅ Passo a Passo para Resolver o Git
 
-Siga os passos diretamente no servidor (`deploy@servidor-app-processa-modelos`).
+Siga os passos diretamente no servidor (`deploy@app-backend`).
 
 ## 1️⃣ Verifique se a chave SSH existe no servidor
 
@@ -33,7 +36,7 @@ ls -la ~/.ssh/
 Se os arquivos id_rsa e id_rsa.pub não existirem, crie uma nova chave SSH:
 
 ```sh
-ssh-keygen -t rsa -b 4096 -C "deploy@servidor-app-processa-modelos"
+ssh-keygen -t rsa -b 4096 -C "deploy@servidor-app-backend"
 ```
 
 Agora, confirme que os arquivos foram gerados:
@@ -66,4 +69,4 @@ Agora, teste a conexão:
 ssh -T git@github.com
 ```
 
-docker logs app-app-processa-modelos
+docker logs app-backend
