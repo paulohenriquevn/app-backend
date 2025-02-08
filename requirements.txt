@@ -1,6 +1,6 @@
 Flask
 pika
 requests
+websockets
 asyncio
-google-api-python-client
 pytest
