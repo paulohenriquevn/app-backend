@@ -1,0 +1,6 @@
+Flask
+pika
+requests
+asyncio
+google-api-python-client
+pytest
