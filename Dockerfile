@@ -18,6 +18,7 @@ ENV FLASK_APP=app.py
 
 # Expor a porta usada pela aplicação
 EXPOSE 8000
+EXPOSE 8765
 
 
 # Comando para rodar a aplicação no local correto
