@@ -1,16 +1,16 @@
 # coleta-dados
 
 Teste:
-http://37.27.255.191:8000/status
+http://65.108.246.19:8000/status
 
 Conectando:
 
 ```sh
-ssh-keygen -R 37.27.255.191
+ssh-keygen -R 65.108.246.19
 
-ssh deploy@37.27.255.191
+ssh deploy@65.108.246.19
 
-ssh root@37.27.255.191
+ssh root@65.108.246.19
 ```
 
 Em caso de problema:
