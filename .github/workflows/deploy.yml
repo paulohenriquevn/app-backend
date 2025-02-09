@@ -46,11 +46,11 @@ jobs:
             
             # Clona o repositório
             cd /home/deploy
-            if [ ! -d "app-processa-modelos/.git" ]; then
-              rm -rf app-processa-modelos
-              git clone git@github.com:paulohenriquevn/app-processa-modelos.git app-processa-modelos
+            if [ ! -d "app-backend/.git" ]; then
+              rm -rf app-backend
+              git clone git@github.com:paulohenriquevn/app-backend.git app-backend
             fi
-            cd app-processa-modelos
+            cd app-backend
             git reset --hard origin/main
             git pull origin main
 
@@ -61,11 +61,11 @@ jobs:
             fi
 
             # Constrói a imagem Docker
-            docker build --no-cache -t app-processa-modelos:latest .
+            docker build --no-cache -t app-backend:latest .
 
             # Para e remove o container antigo, se existir
-            docker stop app-processa-modelos || true
-            docker rm app-processa-modelos || true
+            docker stop app-backend || true
+            docker rm app-backend || true
 
             # Executa o novo container
-            docker run -d --name app-processa-modelos -p 8000:8000 app-processa-modelos:latest
+            docker run -d --name app-backend -p 8000:8000 app-backend:latest
