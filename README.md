@@ -69,4 +69,25 @@ Agora, teste a conexão:
 ssh -T git@github.com
 ```
 
+Logs:
+```sh
+
 docker logs app-backend
+
+docker logs -f --tail 10 app-backend
+
+```
+
+Verificar porta:
+```sh
+docker run -d -p 8765:8765 --name app-backend
+```
+
+Agora, de uma máquina externa, teste se a porta está acessível:
+```sh
+Test-NetConnection -ComputerName 65.108.246.19 -Port 8765
+```
+
+```sh
+Connection to SEU_IP_PUBLICO 8765 port [tcp/*] succeeded!
+```
